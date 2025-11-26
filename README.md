@@ -213,6 +213,7 @@ D --> D1["<a href='terraform/stacks/multi-cloud-gcp/'>GCP Terraform Stack</a>"]
 ```
 
 🧠 What You Learn in Volume 0
+```plaintext 
 ✔ Multi-cloud compute symmetry
 ✔ Zero Trust network segmentation
 ✔ VPC/VNet architecture fundamentals
