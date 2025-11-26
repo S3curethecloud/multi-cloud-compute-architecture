@@ -1,0 +1,65 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+scrape_configs:
+
+  # Scrape local system logs (optional)
+  - job_name: local-logs
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: local
+          __path__: /var/log/*log
+
+  # AWS CloudTrail logs
+  - job_name: aws-cloudtrail
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: cloudtrail
+          __path__: /aws-logs/cloudtrail/*.json
+
+  # AWS VPC Flow Logs
+  - job_name: aws-vpc-flow
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: vpc-flow
+          __path__: /aws-logs/vpc-flow/*.log
+
+  # AWS ALB Access Logs
+  - job_name: aws-alb
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: alb
+          __path__: /aws-logs/alb/*.log
+
+  # AWS GuardDuty Findings
+  - job_name: aws-guardduty
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: guardduty
+          __path__: /aws-logs/guardduty/*.json
+
+  # AWS SecurityHub Findings
+  - job_name: aws-securityhub
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: securityhub
+          __path__: /aws-logs/securityhub/*.json
