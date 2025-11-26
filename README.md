@@ -17,6 +17,93 @@
 This is the **foundational blueprint** for every SecureTheCloud student or professional.  
 It must be completed **before** Identity Layer, Zero Trust, SIEM, or advanced architectures.
 
+# 🧩 SecureTheCloud — Interactive Multi-Cloud System Map  
+*(Every box is clickable. Welcome to the future.)*
+
+```mermaid
+flowchart TD
+
+%% =======================
+%% MAIN ROOT
+%% =======================
+A["<a href='https://github.com/S3curethecloud/multi-cloud-compute-architecture'>SecureTheCloud<br/>Multi-Cloud Compute Architecture</a>"] 
+    --> B["<a href='terraform/modules/'>Terraform Modules</a>"]
+
+B --> C["<a href='terraform/stacks/multi-cloud-aws/'>AWS Architecture</a>"]
+B --> D["<a href='terraform/stacks/multi-cloud-azure/'>Azure Architecture</a>"]
+B --> E["<a href='terraform/stacks/multi-cloud-gcp/'>GCP Architecture</a>"]
+
+%% =======================
+%% SIEM (Future Volume)
+%% =======================
+A --> F["<a href='https://SecureTheCloud.dev'>Unified SIEM Platform (Future Volume)</a>"]
+
+%% =======================
+%% AWS SECTION
+%% =======================
+C --> C1["<a href='terraform/modules/aws-vm/'>AWS EC2 Module</a>"]
+C --> C2["<a href='terraform/modules/aws-network/'>AWS Network<br/>Zero Trust SG</a>"]
+C --> C3["<a href='labs/01-aws-lab.md'>AWS Application Load Balancer</a>"]
+C --> C4["<a href='https://docs.aws.amazon.com/'>AWS Monitoring</a>"]
+C --> C5["<a href='labs/04-validation-lab.md'>AWS SIEM Log Buckets</a>"]
+
+C1 --> C1a["<a href='labs/01-aws-lab.md'>EC2 Instance<br/>Ubuntu 22.04</a>"]
+C2 --> C2a["Zero Trust:<br/>Deny All Ingress<br/>Allow 443 Egress"]
+C3 --> C3a["ALB Listener → Target Group"]
+C4 --> C4a["CloudTrail · VPC Flow Logs<br/>GuardDuty · SecurityHub"]
+C5 --> C5a["<a href='labs/04-validation-lab.md'>JSON · CLF · Parquet</a>"]
+
+%% =======================
+%% AZURE SECTION
+%% =======================
+D --> D1["<a href='terraform/modules/azure-vm/'>Azure VM Module</a>"]
+D --> D2["<a href='terraform/modules/azure-network/'>Azure Network<br/>Zero Trust NSG</a>"]
+D --> D3["<a href='labs/02-azure-lab.md'>Azure Load Balancer</a>"]
+D --> D4["<a href='theory/03-azure-architecture.md'>Azure Monitoring</a>"]
+
+D1 --> D1a["Linux VM"]
+D2 --> D2a["Zero Trust:<br/>Deny All Inbound<br/>Allow 443 Outbound"]
+D3 --> D3a["Public IP → Backend Pool LB"]
+D4 --> D4a["Log Analytics<br/>Defender Alerts<br/>Diagnostics Logs"]
+
+%% =======================
+%% GCP SECTION
+%% =======================
+E --> E1["<a href='terraform/modules/gcp-vm/'>GCP Compute Engine Module</a>"]
+E --> E2["<a href='terraform/modules/gcp-network/'>GCP Network<br/>Zero Trust Firewall</a>"]
+E --> E3["<a href='labs/03-gcp-lab.md'>GCP HTTPS Load Balancer</a>"]
+E --> E4["<a href='theory/04-gcp-architecture.md'>GCP Monitoring</a>"]
+
+E1 --> E1a["e2-micro VM"]
+E2 --> E2a["Zero Trust:<br/>Deny All Inbound<br/>Restrict Outbound"]
+E3 --> E3a["Global HTTPS LB"]
+E4 --> E4a["SCC Alerts<br/>VPC Flow Logs<br/>Audit Logs"]
+
+%% =======================
+%% SIEM PIPELINE (Clickable Soon)
+%% =======================
+F --> F1["<a href='https://SecureTheCloud.dev'>Promtail Agents</a>"]
+F1 --> F2["<a href='https://SecureTheCloud.dev'>Loki Log Store</a>"]
+F2 --> F3["<a href='https://SecureTheCloud.dev'>Grafana Dashboards</a>"]
+
+%% LOG INGESTION PATHS
+C5a --> F1
+D4a --> F1
+E4a --> F1
+
+%% COLOR STYLES
+style A fill:#1F618D,stroke:#fff,stroke-width:2px,color:white
+style B fill:#A93226,stroke:#fff,color:white
+style C fill:#2874A6,color:white
+style D fill:#1E8449,color:white
+style E fill:#B03A2E,color:white
+style F fill:#76448A,color:white
+style F1 fill:#BB8FCE,color:black
+style F2 fill:#D7BDE2,color:black
+style F3 fill:#E8DAEF,color:black
+```
+
+
 ---
 
 # 🧭 **📚 Course Navigation (Chronological)**  
