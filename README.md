@@ -18,7 +18,6 @@ This is the **foundational blueprint** for every SecureTheCloud student or profe
 It must be completed **before** Identity Layer, Zero Trust, SIEM, or advanced architectures.
 
 # 🧩 SecureTheCloud — Interactive Multi-Cloud System Map  
-*(Every box is clickable. Welcome to the future.)*
 
 ```mermaid
 flowchart TD
