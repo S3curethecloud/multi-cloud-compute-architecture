@@ -1,6 +1,6 @@
 <div align="center">
 
-# ![SecureTheCloud Banner](diagrams/securethecloud-banner.png)
+# ![SecureTheCloud Banner](identity-banner.png)
 
 ### **SecureTheCloud Academy**
 #### *Multi-Cloud Zero Trust • Cloud Security • Enterprise Architecture*
