@@ -47,6 +47,7 @@ https://github.com/S3curethecloud/multi-cloud-identity-aws-entra
 ### ➡ **Future → Volume 5 — Multi-Cloud Compliance & Auditing**  
 ### ➡ **Future → Volume 6 — Multi-Cloud Network Mesh**  
 ### ➡ **Future → Volume 7 — Threat Detection & Identity Analytics**
+### ➡ **Future - Volume 8 — Delta Airline Flight Operations Command Center
 
 This repo acts as the **hub** for all SecureTheCloud courses.
 
