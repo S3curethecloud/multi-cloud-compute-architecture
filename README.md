@@ -1,6 +1,6 @@
 <div align="center">
 
-# !(docs/diagrams/identity-banner.png)
+# diagrams/identity-banner.png
 
 ### **SecureTheCloud Academy**
 #### Multi-Cloud Zero Trust • Cloud Security Engineering • Enterprise Architecture
