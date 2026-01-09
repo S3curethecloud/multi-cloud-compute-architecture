@@ -40,8 +40,7 @@ You will deploy AWS, Azure, and GCP compute foundations with Terraform.
 
 ### ➡ **Next → Volume 1 — AWS IAM Identity Center ↔ Microsoft Entra Federation**  
 https://github.com/S3curethecloud/multi-cloud-identity-aws-entra
-
-### ➡ **Future → Volume 2 — GCP Workforce Identity Federation** *(coming soon)*  
+https://github.com/S3curethecloud/multi-cloud-identity-gcp-wif.git  
 ### ➡ **Future → Volume 3 — Azure Conditional Access Zero Trust**  
 ### ➡ **Future → Volume 4 — Multi-Cloud SIEM Architecture**  
 ### ➡ **Future → Volume 5 — Multi-Cloud Compliance & Auditing**  
