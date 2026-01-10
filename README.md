@@ -1,6 +1,4 @@
-<div align="center">
-
-# diagrams/identity-banner.png
+![](logo.webp)
 
 ### **SecureTheCloud Academy**
 #### Multi-Cloud Zero Trust • Cloud Security Engineering • Enterprise Architecture
